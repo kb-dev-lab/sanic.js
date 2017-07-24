@@ -5,7 +5,7 @@
 
 > Another new day in the Javascript's world, and this fucking Array.prototype.map() function is always slow. But Sanic is here to save Javascript from the performance hell. GOTTA GO FAST !
 
-**sanic.js** is a library which increase Javascript natives functions performance to the detriment of some unused cases of EcmaScript specification. For example, this library removes _hasOwnProperty()_ check in Array methods, because nobody use Array methods for an Object. (Why am I saying that : [See Note 2 of this paragraph](http://www.ecma-international.org/ecma-262/6.0/#sec-array.prototype.map)). 
+**sanic.js** is a library which increases Javascript natives functions performance to the detriment of some unused cases of EcmaScript specification. For example, this library removes _hasOwnProperty()_ check in Array methods, because nobody uses Array methods for an Object. (Why am I saying that : [See Note 2 of this paragraph](http://www.ecma-international.org/ecma-262/6.0/#sec-array.prototype.map)). 
 
 This project has 2 common uses :
  - like any other library with a classic object with methods.
@@ -24,7 +24,7 @@ Due to the danger of the library, there's a lot of unit test and performance tes
 ## Installation
 
 ```bash
-    npm install sanic.js
+    npm install --save sanic.js
 ```
 
 ## API
@@ -86,6 +86,6 @@ Benchmarks [here](doc/perf.md).
 
 ## License 
 
-MIT ([/LICENSE](/LICENSE))
+MIT ([LICENSE](/LICENSE))
 
-### Thanks to [Promyze](https://promyze.com) to give me time and motivation to work on this project.
+### Thanks to [ProMyze](https://promyze.com) to give me time and motivation to work on this project.
