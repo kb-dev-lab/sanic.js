@@ -1,0 +1,39 @@
+{
+  "name": "sanic.js",
+  "version": "0.0.1",
+  "description": "JS Native Functions gotta go fast",
+  "main": "index.js",
+  "homepage": "https://github.com/AamuLumi/sanic.js",
+  "directories": {
+    "lib": "lib",
+    "doc": "doc"
+  },
+  "repository" :{ 
+    "type" : "git", 
+    "url" : "https://github.com/AamuLumi/sanic.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AamuLumi/sanic.js/issues",
+    "email": "florian@kauder.fr"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
+  },
+  "scripts": {
+    "test": "mocha ./test/index.js",
+    "benchmark": "node ./bench/index.js"
+  },
+  "keywords": [
+    "performance",
+    "optimization",
+    "fast",
+    "faster",
+    "native",
+    "sanic"
+  ],
+  "author": "Florian \"Aamu Lumi\" Kauder <florian@kauder.fr>",
+  "license": "MIT"
+}
