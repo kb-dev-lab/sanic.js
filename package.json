@@ -8,9 +8,9 @@
     "lib": "lib",
     "doc": "doc"
   },
-  "repository" :{ 
-    "type" : "git", 
-    "url" : "https://github.com/AamuLumi/sanic.js.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AamuLumi/sanic.js.git"
   },
   "bugs": {
     "url": "https://github.com/AamuLumi/sanic.js/issues",
@@ -20,10 +20,12 @@
   "devDependencies": {
     "benchmark": "^2.1.4",
     "chai": "^4.1.0",
-    "mocha": "^3.4.2"
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3"
   },
   "scripts": {
-    "test": "mocha ./test/index.js",
+    "test": "nyc ./node_modules/mocha/bin/_mocha ./test/index.js",
+    "report-coverage": "nyc report --reporter=lcov | codecov",
     "benchmark": "node ./bench/index.js"
   },
   "keywords": [
