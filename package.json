@@ -26,7 +26,8 @@
   "scripts": {
     "test": "nyc ./node_modules/mocha/bin/_mocha ./test/index.js",
     "report-coverage": "nyc report --reporter=lcov",
-    "benchmark": "node ./bench/index.js"
+    "benchmark": "node ./bench/index.js",
+    "exp": "EXPERIMENTAL=true node ./bench/index.js"
   },
   "keywords": [
     "performance",
