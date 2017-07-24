@@ -3,6 +3,10 @@ language: node_js
 node_js:
   - "6"
 
+cache:
+  directories:
+  - node_modules
+
 install: 
   - npm install
   - npm install -g codecov
@@ -10,3 +14,4 @@ install:
 script:
   - npm test
   - npm run report-coverage
+  - codecov

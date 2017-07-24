@@ -25,7 +25,7 @@
   },
   "scripts": {
     "test": "nyc ./node_modules/mocha/bin/_mocha ./test/index.js",
-    "report-coverage": "nyc report --reporter=lcov | codecov",
+    "report-coverage": "nyc report --reporter=lcov",
     "benchmark": "node ./bench/index.js"
   },
   "keywords": [
