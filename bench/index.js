@@ -7,9 +7,10 @@ const Classes = {
 };
 
 const SuiteOptions = {
-    async: false,
-    minSamples: 100
+    async: false
 };
+
+Benchmark.options.minSamples = 200;
 
 const ALL = 'all';
 const WRITE_FILE = 'writeFile';
@@ -44,7 +45,7 @@ if (process.argv.length > 2 && !writeFileArg ||
 
 if (writeFileArg) {
     fileWriter = new BenchFileCreator();
-    fileWriter.addInformations(SuiteOptions.minSamples);
+    fileWriter.addInformations(Benchmark.options.minSamples);
 }
 
 function computeBenchmarkSuite() {

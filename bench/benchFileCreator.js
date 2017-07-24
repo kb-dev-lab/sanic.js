@@ -48,7 +48,8 @@ module.exports = class BenchFileCreator {
     }
 
     addInformations(nbSamples) {
-        this._write(`Minimum sample size : ${nbSamples}\n`);
+        this._write(`**Node version** : ${process.version}  \n` +
+            `**Minimum sample size** : ${nbSamples}  \n`);
     }
 
     end() {
