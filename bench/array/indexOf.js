@@ -25,9 +25,9 @@ function sanicIndexOf(array, searchIndex, fromIndex) {
         i = array.length + fromIndex;
     }
 
-    let iMax = array.length;
+    const iMax = array.length;
 
-    while (iMax - i++){
+    for (; i < iMax; i++) {
         if (array[i] === searchIndex){
             return i;
         }
@@ -66,8 +66,6 @@ function doSuite(name, computeSuite, suiteOptions) {
 		default:
 			break;
     }
-        
-    console.log(sanicIndexOf(little, 1));
 
 	console.log(`\t10 elements - ${name}`);
 	computeSuite()
