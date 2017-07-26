@@ -1,6 +1,6 @@
 {
   "name": "sanic.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JS Native Functions gotta go fast",
   "main": "index.js",
   "homepage": "https://github.com/AamuLumi/sanic.js",
@@ -26,7 +26,8 @@
   "scripts": {
     "test": "nyc ./node_modules/mocha/bin/_mocha ./test/index.js",
     "report-coverage": "nyc report --reporter=lcov",
-    "benchmark": "node ./bench/index.js"
+    "benchmark": "node ./bench/index.js",
+    "exp": "EXPERIMENTAL=true node ./bench/index.js"
   },
   "keywords": [
     "performance",

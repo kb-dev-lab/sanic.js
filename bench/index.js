@@ -75,7 +75,7 @@ Object.keys(Classes).forEach((className) => {
     console.log(`\n# ${className}`);
     if (fileWriter) {
         fileWriter.writeTitle(className);
-        fileWriter.writeTableHeader();
+        fileWriter.writeTableHeader(['Method', 'Test', '10', '1k', '1M']);
     }
 
     const benchMethods = Classes[className];
@@ -84,6 +84,10 @@ Object.keys(Classes).forEach((className) => {
         if (onlySpecificTest && !testsToDo[className].all &&
             !testsToDo[className].methods.some(
                 (name) => name === methodName)) {
+            return;
+        }
+
+        if (!benchMethods[methodName]) {
             return;
         }
 
