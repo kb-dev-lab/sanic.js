@@ -31,9 +31,17 @@ module.exports = class BenchFileCreator {
         this._write(`${elements.join(' | ')}\n`);
     }
 
-    writeTableHeader() {
-        this._write('Method | Test | 10 | 1k | 1M\n' +
-            '--- | --- | --- | --- | ---');
+    writeTableHeader(headers) {
+        let headerLine = headers.reduce(
+            (acc, header) => `${acc} ${header} |`, '');
+
+        headerLine += '\n';
+
+        headers.forEach(() => {
+            headerLine += '--- |';
+        })
+
+        this._write(headerLine);
 
         this.newLine();
     }
@@ -43,7 +51,7 @@ module.exports = class BenchFileCreator {
     }
 
     _init() {
-        this._write('# Benchmarks\n' + 
+        this._write('# Benchmarks\n' +
             `_generated at ${new Date().toUTCString()}_\n\n`);
     }
 
