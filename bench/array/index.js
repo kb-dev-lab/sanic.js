@@ -10,6 +10,7 @@ module.exports = {
     lastIndexOf: process.env.EXPERIMENTAL ? require('./lastIndexOf') : undefined,
     map: require('./map'),
     reduce: require('./reduce'),
+    reverse: require('./reverse'),    
     shift: process.env.EXPERIMENTAL ? require('./shift') : undefined,
     some: require('./some')
 };

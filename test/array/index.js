@@ -6,5 +6,6 @@ module.exports = {
     forEach: require('./forEach'),
     map: require('./map'),
     reduce: require('./reduce'),
+    reverse: require('./reverse'),
     some: require('./some')
 };
