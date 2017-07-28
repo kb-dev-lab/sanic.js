@@ -9,17 +9,17 @@
 
 This project has 2 common uses :
  - like any other library with a classic object with methods.
- - with a special require to change prototype of natives objects concerned (Array, Object, ...).
+ - with a special require changing prototype of natives objects concerned (Array, Object, ...).
 
 > gosh you're changing prototype of native objects taht's baaaaaaaad !!!!! :((
 
-The advantage of this bad technic is performance of all library called after **sanic.js** will be impacted, and using this technic is only one line away : 
+The advantage of this bad technic is performances of all library called after **sanic.js** will be impacted, and using this technic is only one line away : 
 
 ```js 
     require('sanic.js').changeMyWorld();
 ``` 
 
-Due to the danger of the library, there's a lot of unit test and performance tests to try to protect you from bugs. But anyway, there's always bugs, so please report them in **Issues** section.
+Due to the danger of the library, there's a lot of unit test and performance tests to try to protect you from bugs. But anyway, there are always bugs, so please report them in **Issues** section.
 
 ## Installation
 
@@ -31,7 +31,7 @@ Due to the danger of the library, there's a lot of unit test and performance tes
 
 ### Fast use
 
-This mode replaces all prototypes methods by their Sanic equivalents. Sanic methods are written with same parameters than natives prototypes methodes. Goal is to give faster functions **without any code adaptation**.
+This mode replaces all prototypes methods by their Sanic equivalents. Sanic methods are written with same parameters than natives prototypes methods. The goal is to give faster functions **without any code adaptation**.
 
 ```js
     require('sanic.js').changeMyWorld();
@@ -46,7 +46,7 @@ This mode replaces all prototypes methods by their Sanic equivalents. Sanic meth
 
 ### Library use
 
-In this mode, all functions need the object to use to first parameter, and all classic parameters after.
+In this mode, all functions need the object to use to the first parameter and all classic parameters after.
 
 ```js 
     const Sanic = require('sanic.js').Library;
