@@ -41,8 +41,6 @@ module.exports = function (computeSuite, fileWriter, suiteOptions) {
         })
         .run(suiteOptions);
 
-    console.log(little);
-
     console.log(`\t1k elements`);
     computeSuite()
         .add('Array.prototype.shift()', function () {
