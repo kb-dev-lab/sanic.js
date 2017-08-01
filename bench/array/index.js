@@ -3,6 +3,7 @@
 module.exports = {
     every: require('./every'),
     filter: require('./filter'),
+    fill: require('./fill'),    
     find: process.env.EXPERIMENTAL ? require('./find') : undefined,
     forEach: require('./forEach'),
     indexOf: process.env.EXPERIMENTAL ? require('./indexOf') : undefined,
