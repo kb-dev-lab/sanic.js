@@ -22,13 +22,42 @@ function computeNumber(nb) {
     }
 }
 
+function simpleRecursiveIteration(array, i = 0){
+    if (i < array.length) {
+        array[i] * array[i];
+
+        return simpleRecursiveIteration(array, i+1);
+    }
+}
+
+function recursiveClosureIteration(array){
+    let i = 0;
+
+    function rec(array){
+        if (i < array.length){
+            array[i] * array[i];
+
+            i++;
+
+            return rec(array);
+        }
+    }
+    
+    return rec(array);
+}
+
 function doSuite(arrayLength) {
     console.log(`# Array.length : ${arrayLength}`);
     const Suite = new Benchmark.Suite();
-
     const array = new Array(arrayLength).fill(0);
 
     Suite
+        .add('Simple recursion', function() {
+            simpleRecursiveIteration(array);
+        })
+        .add('Simple recursion with i in closure', function() {
+            recursiveClosureIteration(array);
+        })
         .add('for (let i = 0; i < array.length; i++)', function () {
             for (let i = 0; i < array.length; i++) {
                 array[i] * array[i];

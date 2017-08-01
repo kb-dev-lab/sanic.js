@@ -2,7 +2,18 @@
 
 **Note :** [ex]function() are experimental functions, and aren't added in sanic.js library.
 
-## v0.0.2
+## v0.0.3 - 01/08/17
+
+- Add Array.prototype.fill()
+- Add Array.prototype.reverse()
+- Add [ex]Array.prototype.join()
+- Add [ex]Array.prototype.shift()
+- Add [ex]Array.prototype.includes()
+- Add bench/misc to create some Javascript concepts tests
+- Add misc/loop to check best JS iteration way
+- Add misc/stackSize to check JS stack size
+
+## v0.0.2 - 26/07/17
 
 - Increase performance of Array functions
 - Add experimental flag 
@@ -11,7 +22,7 @@
 - Add [ex]Array.prototype.find()
 - Add loop benchmarks
 
-## v0.0.1
+## v0.0.1 - 24/07/17
 
 - Add Array.prototype.every()
 - Add Array.prototype.filter()

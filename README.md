@@ -57,15 +57,17 @@ In this mode, all functions need the object to use to the first parameter and al
     );
 ```
 
-## Re-worked functions
+## Available reworked functions
 
 ### Array
 
   - Array.prototype.**every()**
+  - Array.prototype.**fill()**
   - Array.prototype.**filter()**
   - Array.prototype.**forEach()**
   - Array.prototype.**map()**
   - Array.prototype.**reduce()**
+  - Array.prototype.**reverse()**
   - Array.prototype.**some()**
 
 ## Performance
@@ -79,10 +81,37 @@ In this mode, all functions need the object to use to the first parameter and al
 
     # Method can be set to 'all' to test all methods of a class
     npm run benchmark Array.all
-
 ```
 
 Benchmarks [here](doc/perf.md).
+
+## Experimental functions
+
+To create this library, I do some bench tests on each function detailed in EcmaScript. But sometimes, natives functions are faster. I consider these functions I wrote and were slower than natives functions are **experimental functions**. That's why there are more functions available in benchmarks than in lib.
+
+If you want to test the performance of these functions (in the case of you want to help this library or others things) :  
+
+```bash
+    # Run all benchmarks
+    npm run exp
+
+    # Run specific benchmarks
+    npm run exp Array.map Array.indexOf
+
+    # Method can be set to 'all' to test all methods of a class
+    npm run exp Array.all
+```
+
+This is the same command line than benchmarks, but it enables a new flag which allows using experimental functions.
+
+### Array
+
+  - Array.prototype.**find()**
+  - Array.prototype.**includes()**
+  - Array.prototype.**indexOf()**
+  - Array.prototype.**join()**
+  - Array.prototype.**lastIndexOf()**
+  - Array.prototype.**shift()**
 
 ## License 
 
