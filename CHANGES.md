@@ -6,6 +6,9 @@
 
 - Add Array.prototype.fill()
 - Add Array.prototype.reverse()
+- Add [ex]Array.prototype.join()
+- Add [ex]Array.prototype.shift()
+- Add [ex]Array.prototype.includes()
 - Add bench/misc to create some Javascript concepts tests
 - Add misc/loop to check best JS iteration way
 - Add misc/stackSize to check JS stack size

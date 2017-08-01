@@ -107,6 +107,7 @@ This is the same command line than benchmarks, but it enables a new flag which a
 ### Array
 
   - Array.prototype.**find()**
+  - Array.prototype.**includes()**
   - Array.prototype.**indexOf()**
   - Array.prototype.**join()**
   - Array.prototype.**lastIndexOf()**

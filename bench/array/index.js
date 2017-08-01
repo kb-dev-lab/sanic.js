@@ -6,6 +6,7 @@ module.exports = {
     fill: require('./fill'),    
     find: process.env.EXPERIMENTAL ? require('./find') : undefined,
     forEach: require('./forEach'),
+    includes: process.env.EXPERIMENTAL ? require('./includes') : undefined,    
     indexOf: process.env.EXPERIMENTAL ? require('./indexOf') : undefined,
     join: process.env.EXPERIMENTAL ? require('./join') : undefined,    
     lastIndexOf: process.env.EXPERIMENTAL ? require('./lastIndexOf') : undefined,
