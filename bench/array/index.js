@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+    concat: process.env.EXPERIMENTAL ? require('./concat') : undefined,    
     every: require('./every'),
     filter: require('./filter'),
     fill: require('./fill'),    
