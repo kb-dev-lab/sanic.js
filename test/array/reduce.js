@@ -21,8 +21,8 @@ const sumUnderThresholdContext = {
 
 module.exports = function () {
     describe('Base behaviours', function () {
-        it('should need an array', function () {
-            expect(() => sanicReduce()).to.throw('array is not an Array');
+        it('should do nothing if there\'s no array', function () {
+            expect(sanicReduce()).to.be.undefined;
         });
 
         it('should need a function', function () {
@@ -42,7 +42,19 @@ module.exports = function () {
 
             expect(nativeResult).to.be.eql(sanicResult);
             expect(sanicResult).to.be.eql(100);
-        })
+        });
+
+        it ('should call native reduce if array is not an array', function() {
+            expect(() => sanicReduce({}, (acc, e) => e + acc, 0)).to.not.throw();
+
+            const strTest = 'Hello World';
+            const fnTest = (acc, e) => acc + e.charCodeAt(0);
+
+            const nativeResult = Array.prototype.reduce.call(strTest, fnTest, 0);
+            const sanicResult = sanicReduce(strTest, fnTest, 0);
+
+            expect(nativeResult).to.be.equal(sanicResult);
+        });
     });
 
     describe('Sum function', function () {

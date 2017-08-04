@@ -24,8 +24,8 @@ const constantSumContext = {
 
 module.exports = function () {
     describe('Base behaviours', function () {
-        it('should need an array', function () {
-            expect(() => sanicMap()).to.throw('array is not an Array');
+        it('should do nothing if there\'s no array', function () {
+            expect(sanicMap()).to.be.undefined;
         });
 
         it('should need a function', function () {
@@ -39,6 +39,25 @@ module.exports = function () {
             const sanicResult = sanicMap(emptyArray, squareFunction);
 
             expect(sanicResult.length).to.be.eql(0);
+        });
+
+        it ('should call native map if array is not an array', function() {
+            expect(() => sanicMap({}, (e) => e*e)).to.not.throw();
+
+            const strTest = 'Hello World';
+            const fnTest = (e) => e.charCodeAt(0);
+
+            const nativeResult = Array.prototype.map.call(strTest, fnTest);
+            const sanicResult = sanicMap(strTest, fnTest);
+
+            expect(nativeResult.length).to.be.equal(sanicResult.length);
+            
+            let i = 0;
+            const iMax = nativeResult.length;
+
+            for (; i < iMax; i++){
+                expect(nativeResult[i]).to.be.equal(sanicResult[i]);
+            }
         });
     });
 

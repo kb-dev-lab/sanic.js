@@ -25,8 +25,8 @@ const underThresholdFalseContext = {
 
 module.exports = function () {
     describe('Base behaviours', function () {
-        it('should need an array', function () {
-            expect(() => sanicSome()).to.throw('array is not an Array');
+        it('should do nothing if there\'s no array', function () {
+            expect(sanicSome()).to.be.undefined;
         });
 
         it('should need a function', function () {
@@ -42,6 +42,18 @@ module.exports = function () {
 
             expect(nativeResult).to.be.eql(sanicResult);
             expect(sanicResult).to.be.false;
+        });
+
+        it ('should call native some if array is not an array', function() {
+            expect(() => sanicSome({}, (e) => e === 0)).to.not.throw();
+
+            const strTest = 'Hello World';
+            const fnTest = (e) => e.charCodeAt(0) === 32;
+
+            const nativeResult = Array.prototype.some.call(strTest, fnTest);
+            const sanicResult = sanicSome(strTest, fnTest);
+
+            expect(nativeResult).to.be.equal(sanicResult);
         });
     });
 

@@ -9,7 +9,7 @@ module.exports = {
             const libForClass = library[className];
 
             Object.keys(libForClass).forEach((methodName) => {
-                if (methodName === 'constructor'){
+                if (methodName === 'constructor') {
                     return;
                 }
 
