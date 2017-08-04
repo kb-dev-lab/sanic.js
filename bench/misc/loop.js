@@ -52,12 +52,6 @@ function doSuite(arrayLength) {
     const array = new Array(arrayLength).fill(0);
 
     Suite
-        .add('Simple recursion', function() {
-            simpleRecursiveIteration(array);
-        })
-        .add('Simple recursion with i in closure', function() {
-            recursiveClosureIteration(array);
-        })
         .add('for (let i = 0; i < array.length; i++)', function () {
             for (let i = 0; i < array.length; i++) {
                 array[i] * array[i];
@@ -147,6 +141,12 @@ function doSuite(arrayLength) {
             while (i++) {
                 array[i + array.length] * array[i + array.length];
             }
+        })
+        .add('Simple recursion', function() {
+            simpleRecursiveIteration(array);
+        })
+        .add('Simple recursion with i in closure', function() {
+            recursiveClosureIteration(array);
         })
         .on('cycle', function (event) {
             console.log(String(event.target));

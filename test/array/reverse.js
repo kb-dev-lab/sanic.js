@@ -8,14 +8,18 @@ const emptyArray = [];
 
 module.exports = function () {
     describe('Base behaviours', function () {
-        it('should need an array', function () {
-            expect(() => sanicReverse()).to.throw('array is not an Array');
+        it('should do nothing if there\'s no array', function () {
+            expect(sanicReverse()).to.be.undefined;
         });
 
         it('should return empty array with empty array input', function () {
             const sanicResult = sanicReverse(emptyArray);
 
             expect(sanicResult.length).to.be.eql(0);
+        });
+
+        it ('should call native reverse if array is not an array', function() {
+            expect(() => sanicReverse({})).to.not.throw();
         });
     });
 

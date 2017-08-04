@@ -10,8 +10,8 @@ const sanicResultArray = new Array(10000);
 
 module.exports = function () {
     describe('Base behaviours', function () {
-        it('should need an array', function () {
-            expect(() => sanicFill()).to.throw('array is not an Array');
+        it('should do nothing if there\'s no array', function () {
+            expect(sanicFill()).to.be.undefined;
         });
 
         it('should do nothing with empty array', function () {
@@ -34,6 +34,25 @@ module.exports = function () {
 
             for (; i < iMax; i++) {
                 expect(sanicResult[i]).to.be.eql(sanicResultArray[i]);
+            }
+        });
+
+        it ('should call native fill if array is not an array', function() {
+            expect(() => sanicFill({}, 4)).to.not.throw();
+
+            const nativeObjTest = {length: 4};
+            const sanicObjTest = {length: 4};
+
+            const nativeResult = Array.prototype.fill.call(nativeObjTest, 1);
+            const sanicResult = sanicFill(sanicObjTest, 1);
+
+            expect(nativeResult.length).to.be.equal(sanicResult.length);
+            
+            let i = 0;
+            const iMax = nativeResult.length;
+
+            for (; i < iMax; i++){
+                expect(nativeResult[i]).to.be.equal(sanicResult[i]);
             }
         });
     });

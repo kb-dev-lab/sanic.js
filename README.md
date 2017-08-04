@@ -19,6 +19,8 @@ The advantage of this bad technic is performances of all library called after **
     require('sanic.js').changeMyWorld();
 ``` 
 
+Since v0.0.4, if an updated method fell in a case where it cannot work, it will call the native method instead. It keeps compatibility with a lot of code and optimization are only done on good cases. This feature is enabled in all common uses.
+
 Due to the danger of the library, there's a lot of unit test and performance tests to try to protect you from bugs. But anyway, there are always bugs, so please report them in **Issues** section.
 
 ## Installation

@@ -13,8 +13,8 @@ const countUnderThresholdContext = {
 
 module.exports = function () {
     describe('Base behaviours', function () {
-        it('should need an array', function () {
-            expect(() => sanicForEach()).to.throw('array is not an Array');
+        it('should do nothing if there\'s no array', function () {
+            expect(sanicForEach()).to.be.undefined;
         });
 
         it('should need a function', function () {
@@ -34,6 +34,10 @@ module.exports = function () {
             sanicForEach(emptyArray, (e) => {
                 sanicResult += e;
             });
+        });
+
+        it ('should call native forEach if array is not an array', function() {
+            expect(() => sanicForEach({}, (e) => e*e)).to.not.throw();
         });
     });
 

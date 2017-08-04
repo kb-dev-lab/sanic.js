@@ -52,3 +52,13 @@ Object.keys(Classes).forEach((className) => {
         });
     });
 });
+
+describe('changeMyWorld(): check activation and fallback', function() {
+    it('should enable sanic functions in prototype', function() {
+        require('../index').changeMyWorld();
+    });
+
+    it('should not crash when array is not an array', function() {
+        [].map.call({}, (e) => e * e);
+    });
+});
