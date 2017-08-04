@@ -2,6 +2,11 @@
 
 **Note :** [ex]function() are experimental functions, and aren't added in sanic.js library.
 
+## v0.0.4 - 04/08/17
+
+ - Add natives methods calls on optimized functions bad cases.
+For example, Array functions are optimized for Array, and crashed when array was not an array. Now, it will call the native methods instead, keeping compatibility with Object mapping, etc.
+
 ## v0.0.3 - 01/08/17
 
 - Add Array.prototype.fill()
