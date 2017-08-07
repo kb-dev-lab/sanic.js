@@ -27,6 +27,11 @@ module.exports = class BenchFileCreator {
         this.onNewLine = true;
     }
 
+    newSimpleLine() {
+        this._write(`\n`);
+        this.onNewLine = true;
+    }
+
     _writeTableRow(elements) {
         this._write(`${elements.join(' | ')}\n`);
     }
@@ -42,8 +47,6 @@ module.exports = class BenchFileCreator {
         })
 
         this._write(headerLine);
-
-        this.newLine();
     }
 
     writeTitle(title) {

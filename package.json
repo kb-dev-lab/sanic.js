@@ -20,6 +20,8 @@
   "devDependencies": {
     "benchmark": "^2.1.4",
     "chai": "^4.1.0",
+    "fast.js": "^0.1.1",
+    "lodash": "^4.17.4",
     "mocha": "^3.4.2",
     "nyc": "^11.0.3"
   },

@@ -86,6 +86,7 @@ In this mode, all functions need the object to use to the first parameter and al
 ```
 
 Benchmarks [here](doc/perf.md).
+If you want to compare this library with others (fast.js and lodash), I made a benchmark available [here](docs/comp-bench.md).
 
 ## Experimental functions
 
