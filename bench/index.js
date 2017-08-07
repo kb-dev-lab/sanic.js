@@ -76,6 +76,7 @@ Object.keys(Classes).forEach((className) => {
     if (fileWriter) {
         fileWriter.writeTitle(className);
         fileWriter.writeTableHeader(['Method', 'Test', '10', '1k', '1M']);
+        fileWriter.newLine();
     }
 
     const benchMethods = Classes[className];
