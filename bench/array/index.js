@@ -14,6 +14,7 @@ module.exports = {
     map: require('./map'),
     push: process.env.EXPERIMENTAL ? require('./push'): undefined,
     reduce: require('./reduce'),
+    reduceRight: require('./reduceRight'),
     reverse: require('./reverse'),    
     shift: process.env.EXPERIMENTAL ? require('./shift') : undefined,
     some: require('./some')

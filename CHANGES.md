@@ -2,6 +2,12 @@
 
 **Note :** [ex]function() are experimental functions, and aren't added in sanic.js library.
 
+## v.X.X.X - XX/XX/XX
+
+ - Upgrade Array.prototype.reduce()
+ - Add Array.prototype.reduceRight()
+ - Add [ex]Array.prototype.push()
+
 ## v0.0.4 - 04/08/17
 
  - Add natives methods calls on optimized functions bad cases.
