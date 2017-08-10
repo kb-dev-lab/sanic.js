@@ -14,11 +14,11 @@ function sanicJoin(array, separator = ',') {
         return array[0];
     }
 
-    let res = array[0], i = 1;
+    let res = String(array[0]), i = 1;
     const iMax = array.length;
 
     for (; i < iMax; i++){
-        res += `${separator}${array[i]}`;
+        res += separator + array[i];
     }
 
     return res;
