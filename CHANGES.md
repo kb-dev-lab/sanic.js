@@ -5,6 +5,7 @@
 ## v.X.X.X - XX/XX/XX
 
  - Upgrade Array.prototype.reduce()
+ - Upgrade Array.prototype.fill()
  - Add Array.prototype.reduceRight()
  - Add [ex]Array.prototype.push()
 
