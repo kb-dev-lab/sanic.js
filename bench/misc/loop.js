@@ -148,6 +148,13 @@ function doSuite(arrayLength) {
         .add('Simple recursion with i in closure', function() {
             recursiveClosureIteration(array);
         })
+        .add('let i = array.length; for (; i-- ;)', function() {
+            let i = array.length;
+
+            for (; i--;) {
+                array[i] * array[i];
+            }
+        })
         .on('cycle', function (event) {
             console.log(String(event.target));
             if (fileWriter) {
