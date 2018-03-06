@@ -15,5 +15,6 @@ module.exports = {
     reduce: require('./reduce'),
     reverse: require('./reverse'),    
     shift: process.env.EXPERIMENTAL ? require('./shift') : undefined,
-    some: require('./some')
+    some: require('./some'),
+    unshift: require('./unshift'),
 };
