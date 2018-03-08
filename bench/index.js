@@ -3,7 +3,8 @@
 const BenchFileCreator = require('./benchFileCreator');
 const Benchmark = require('benchmark');
 const Classes = {
-    Array: require('./array')
+    Array: require('./array'),
+    Object: require('./object'),
 };
 
 const SuiteOptions = {
