@@ -2,6 +2,13 @@
 
 **Note :** [ex]function() are experimental functions, and aren't added in sanic.js library.
 
+## v0.1.0 - 09/03/18
+
+ - Add Object.assign()
+ - Refactor main to accept constructor functions and prototype functions
+ - Improve Array checking
+ - Update benchmark with Noce 8.9.4 (LTS)
+
 ## v0.0.4 - 04/08/17
 
  - Add natives methods calls on optimized functions bad cases.

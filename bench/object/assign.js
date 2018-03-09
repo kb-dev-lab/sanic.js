@@ -19,6 +19,8 @@ module.exports = function(computeSuite, fileWriter, suiteOptions) {
 	const medium = generateObject(1000);
 	const big = generateObject(1000000);
 
+    if (fileWriter) fileWriter.writeTableElement('Assign object with n elements');	
+
 	console.log(`\t10 elements`);
 	computeSuite()
 		.add('Array.prototype.assign()', function() {
