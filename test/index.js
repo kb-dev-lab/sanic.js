@@ -3,7 +3,8 @@
 const mocha = require('mocha');
 
 const Classes = {
-    Array: require('./array')
+	Array: require('./array'),
+	Object: require('./object'),
 };
 
 const ALL = 'all';
@@ -11,54 +12,59 @@ const ALL = 'all';
 let onlySpecificTest = false;
 const testsToDo = {};
 
-
 if (process.argv.length > 3) {
-    onlySpecificTest = true;
+	onlySpecificTest = true;
 
-    for (let i = 3, iMax = process.argv.length; i < iMax; i++) {
-        const [className, methodName] = process.argv[i].split('.');
+	for (let i = 3, iMax = process.argv.length; i < iMax; i++) {
+		const [className, methodName] = process.argv[i].split('.');
 
-        if (!testsToDo[className]) {
-            testsToDo[className] = {
-                all: false,
-                methods: []
-            };
-        }
+		if (!testsToDo[className]) {
+			testsToDo[className] = {
+				all: false,
+				methods: [],
+			};
+		}
 
-        if (methodName === ALL) {
-            testsToDo[className].all = true;
-        } else {
-            testsToDo[className].methods.push(methodName);
-        }
-    }
+		if (methodName === ALL) {
+			testsToDo[className].all = true;
+		} else {
+			testsToDo[className].methods.push(methodName);
+		}
+	}
 }
 
 Object.keys(Classes).forEach((className) => {
-    if (onlySpecificTest && !testsToDo[className]) {
-        return;
-    }
+	if (onlySpecificTest && !testsToDo[className]) {
+		return;
+	}
 
-    const classMethods = Classes[className];
+	const classMethods = Classes[className];
 
-    Object.keys(classMethods).forEach((methodName) => {
-        if (onlySpecificTest && !testsToDo[className].all &&
-            !testsToDo[className].methods.some(
-                (name) => name === methodName)) {
-            return;
-        }
+	Object.keys(classMethods).forEach((methodName) => {
+		if (
+			onlySpecificTest &&
+			!testsToDo[className].all &&
+			!testsToDo[className].methods.some((name) => name === methodName)
+		) {
+			return;
+		}
 
-        describe(`${className}.${methodName}()`, function () {
-            Classes[className][methodName]();
-        });
-    });
+		describe(`${className}.${methodName}()`, function() {
+			Classes[className][methodName]();
+		});
+	});
 });
 
 describe('changeMyWorld(): check activation and fallback', function() {
-    it('should enable sanic functions in prototype', function() {
-        require('../index').changeMyWorld();
-    });
+	it('should enable sanic functions in prototype', function() {
+		require('../index').changeMyWorld();
+	});
 
-    it('should not crash when array is not an array', function() {
-        [].map.call({}, (e) => e * e);
-    });
+	it('should not crash when array is not an array', function() {
+		[].map.call({}, (e) => e * e);
+	});
+
+	it('should not crash when calling a constructor function', function() {
+		Object.assign({}, {});
+	});
 });

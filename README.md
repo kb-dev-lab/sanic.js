@@ -72,6 +72,9 @@ In this mode, all functions need the object to use to the first parameter and al
   - Array.prototype.**reverse()**
   - Array.prototype.**some()**
 
+### Object
+  - Object.**assign()**
+
 ## Performance
 
 ```bash

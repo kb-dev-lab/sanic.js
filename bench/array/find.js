@@ -6,6 +6,10 @@ const HALF_VALUE = '1/2 Value';
 const LAST_QUARTER_VALUE = '3/4 Value';
 const END = 'End Value';
 
+/* Tested :
+ * - with a results table to avoid to recall the function with
+ *   an already passed value. (No value 10 el = x0.5)
+ */
 function sanicFind(array, predicate, thisArg) {
     if (!(array instanceof Array)) {
         throw new TypeError('array is not an Array');
@@ -27,7 +31,7 @@ function sanicFind(array, predicate, thisArg) {
 
     for (; i < iMax; i++) {
         if (functionToCall(array[i], i, array)) {
-            return array;
+            return array[i];
         }
     }
 

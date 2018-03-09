@@ -1,8 +1,11 @@
 'use strict';
 
+/* Tested :
+ * - reverse, array.length--, reverse
+ */
 function sanicShift(array) {
     if (!(array instanceof Array)) {
-        throw new TypeError('array is not an array');
+        throw new TypeError('array is not an Array');
     }
     if (!array.length) {
         return undefined;
@@ -13,7 +16,7 @@ function sanicShift(array) {
     let i = 1;
     const iMax = array.length;
 
-    for(; i < iMax; i++){
+    for (; i < iMax; i++) {
         array[i-1] = array[i];
     }
 

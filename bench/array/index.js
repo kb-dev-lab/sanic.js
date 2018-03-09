@@ -17,5 +17,6 @@ module.exports = {
     reduceRight: require('./reduceRight'),
     reverse: require('./reverse'),    
     shift: process.env.EXPERIMENTAL ? require('./shift') : undefined,
-    some: require('./some')
+    some: require('./some'),
+	unshift: process.env.EXPERIMENTAL ? require('./unshift') : undefined,    
 };

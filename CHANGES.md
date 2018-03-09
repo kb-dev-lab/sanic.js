@@ -2,12 +2,19 @@
 
 **Note :** [ex]function() are experimental functions, and aren't added in sanic.js library.
 
-## v.X.X.X - XX/XX/XX
+## vX.X.X - XX/XX/XX
 
  - Upgrade Array.prototype.reduce()
  - Upgrade Array.prototype.fill()
  - Add Array.prototype.reduceRight()
  - Add [ex]Array.prototype.push()
+
+## v0.1.0 - 09/03/18
+
+ - Add Object.assign()
+ - Refactor main to accept constructor functions and prototype functions
+ - Improve Array checking
+ - Update benchmark with Noce 8.9.4 (LTS)
 
 ## v0.0.4 - 04/08/17
 
