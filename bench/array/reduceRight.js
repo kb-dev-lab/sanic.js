@@ -9,8 +9,6 @@ module.exports = function (computeSuite, fileWriter, suiteOptions) {
 
     if (fileWriter) fileWriter.writeTableElement('Sum');
 
-    console.log(sanicReduceRight(little, (acc, e) => acc + e));
-
     console.log(`\t10 elements`);
     computeSuite()
         .add('Array.prototype.reduceRight()', function () {
