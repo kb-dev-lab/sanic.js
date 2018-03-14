@@ -5,9 +5,16 @@ function sanicPush(array, ...items) {
         throw new TypeError();
     }
 
+    if (items.length === 1) {
+        array[array.length] = items[0];
+        
+        return array.length;        
+    }
+
     let i = 0;
+    const iMax = items.length;
     
-    for (; i < items.length; i++){
+    for (; i < iMax; i++){
         array[array.length] = items[i];
     }
 
@@ -28,7 +35,7 @@ module.exports = function (computeSuite, fileWriter, suiteOptions) {
         console.log(`\t10 elements`);
         computeSuite()
             .add('Array.prototype.push()', function () {
-                little.push(2);
+                little.push(...nArray);
                 little.splice(10, n);
             })
             .add('Sanic push()', function () {
@@ -60,8 +67,6 @@ module.exports = function (computeSuite, fileWriter, suiteOptions) {
                 big.splice(1000000, n);
             })
             .run(suiteOptions);
-
-            console.log(little);
     };
 
     doSuite(1);
