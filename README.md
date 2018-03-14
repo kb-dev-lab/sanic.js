@@ -1,7 +1,7 @@
 # sanic.js
 
-[![Build Status](https://travis-ci.org/AamuLumi/sanic.js.svg?branch=master)](https://travis-ci.org/AamuLumi/sanic.js)
-[![codecov](https://codecov.io/gh/AamuLumi/sanic.js/branch/master/graph/badge.svg)](https://codecov.io/gh/AamuLumi/sanic.js)
+[![Build Status](https://travis-ci.org/kb-dev/sanic.js.svg?branch=master)](https://travis-ci.org/kb-dev/sanic.js)
+[![codecov](https://codecov.io/gh/kb-dev/sanic.js/branch/master/graph/badge.svg)](https://codecov.io/gh/kb-dev/sanic.js)
 
 > Another new day in the Javascript's world, and this fucking Array.prototype.map() function is always slow. But Sanic is here to save Javascript from the performance hell. GOTTA GO FAST !
 
@@ -123,4 +123,6 @@ This is the same command line than benchmarks, but it enables a new flag which a
 
 MIT ([LICENSE](/LICENSE))
 
-### Thanks to [ProMyze](https://promyze.com) to give me time and motivation to work on this project.
+## Thanks to
+
+ - ProMyze
