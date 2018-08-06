@@ -129,4 +129,5 @@ MIT ([LICENSE](/LICENSE))
 
 ## Thanks to
 
+ - KBDev
  - ProMyze
