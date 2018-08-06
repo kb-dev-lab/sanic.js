@@ -1,6 +1,6 @@
 {
   "name": "sanic.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JS Native Functions gotta go fast",
   "main": "index.js",
   "homepage": "https://github.com/AamuLumi/sanic.js",
@@ -39,6 +39,6 @@
     "native",
     "sanic"
   ],
-  "author": "Florian \"Aamu Lumi\" Kauder <florian@kauder.fr>",
+  "author": "KBDev - Florian \"Aamu Lumi\" Kauder <florian@kauder.fr>",
   "license": "MIT"
 }

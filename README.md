@@ -1,7 +1,7 @@
 # sanic.js
 
-[![Build Status](https://travis-ci.org/AamuLumi/sanic.js.svg?branch=master)](https://travis-ci.org/AamuLumi/sanic.js)
-[![codecov](https://codecov.io/gh/AamuLumi/sanic.js/branch/master/graph/badge.svg)](https://codecov.io/gh/AamuLumi/sanic.js)
+[![Build Status](https://travis-ci.org/kb-dev/sanic.js.svg?branch=master)](https://travis-ci.org/kb-dev/sanic.js)
+[![codecov](https://codecov.io/gh/kb-dev/sanic.js/branch/master/graph/badge.svg)](https://codecov.io/gh/kb-dev/sanic.js)
 
 > Another new day in the Javascript's world, and this fucking Array.prototype.map() function is always slow. But Sanic is here to save Javascript from the performance hell. GOTTA GO FAST !
 
@@ -69,6 +69,7 @@ In this mode, all functions need the object to use to the first parameter and al
   - Array.prototype.**forEach()**
   - Array.prototype.**map()**
   - Array.prototype.**reduce()**
+  - Array.prototype.**reduceRight()**
   - Array.prototype.**reverse()**
   - Array.prototype.**some()**
 
@@ -93,7 +94,7 @@ If you want to compare this library with others (fast.js and lodash), I made a b
 
 ## Experimental functions
 
-To create this library, I do some bench tests on each function detailed in EcmaScript. But sometimes, natives functions are faster. I consider these functions I wrote and were slower than natives functions are **experimental functions**. That's why there are more functions available in benchmarks than in lib.
+To create this library, I do some bench tests on each function detailed in EcmaScript. But sometimes, natives functions are faster. So I keep my bad functions and I call them **experimental functions**.  That's why there are more functions available in benchmarks than in lib.
 
 If you want to test the performance of these functions (in the case of you want to help this library or others things) :  
 
@@ -112,15 +113,21 @@ This is the same command line than benchmarks, but it enables a new flag which a
 
 ### Array
 
+  - Array.prototype.**concat()**
   - Array.prototype.**find()**
   - Array.prototype.**includes()**
   - Array.prototype.**indexOf()**
   - Array.prototype.**join()**
   - Array.prototype.**lastIndexOf()**
+  - Array.prototype.**push()**
   - Array.prototype.**shift()**
+  - Array.prototype.**unshift()**
 
 ## License 
 
 MIT ([LICENSE](/LICENSE))
 
-### Thanks to [ProMyze](https://promyze.com) to give me time and motivation to work on this project.
+## Thanks to
+
+ - KBDev
+ - ProMyze
