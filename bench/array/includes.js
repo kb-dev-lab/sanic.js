@@ -15,7 +15,7 @@ function sanicIncludes(array, searchElement, fromIndex) {
     if (fromIndex > 0){
         i = fromIndex;
     } else if (fromIndex < 0 && fromIndex > -array.length){
-        i = array.length + fromindex;
+        i = array.length + fromIndex;
     }
 
     for (; i < iMax; i++){
