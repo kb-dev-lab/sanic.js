@@ -23,7 +23,7 @@ module.exports = function(computeSuite, fileWriter, suiteOptions) {
 
 	console.log(`\t10 elements`);
 	computeSuite()
-		.add('Array.prototype.assign()', function() {
+		.add('Object.prototype.assign()', function() {
 			return Object.assign({}, little);
 		})
 		.add('Sanic assign()', function() {
@@ -33,7 +33,7 @@ module.exports = function(computeSuite, fileWriter, suiteOptions) {
 
 	console.log(`\t1k elements`);
 	computeSuite()
-		.add('Array.prototype.assign()', function() {
+		.add('Object.prototype.assign()', function() {
 			return Object.assign({}, medium);
 		})
 		.add('Sanic assign()', function() {
@@ -43,7 +43,7 @@ module.exports = function(computeSuite, fileWriter, suiteOptions) {
 
 	console.log(`\t1M elements`);
 	computeSuite()
-		.add('Array.prototype.assign()', function() {
+		.add('Object.prototype.assign()', function() {
 			return Object.assign({}, big);
 		})
 		.add('Sanic assign()', function() {
