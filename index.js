@@ -2,7 +2,7 @@
 
 const library = require('./lib');
 
-function computeLibrary(baseLibrary) {
+function computeLibrary() {
 	const flatLibrary = {};
 
 	Object.keys(library).forEach((className) => {
@@ -51,6 +51,6 @@ function changeMyWorld() {
 }
 
 module.exports = {
-	Library: computeLibrary(library),
+	Library: computeLibrary(),
 	changeMyWorld,
 };
