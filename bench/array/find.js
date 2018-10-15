@@ -1,41 +1,12 @@
 'use strict';
 
+const sanicFind = require('../../index').Library.Array.find;
+
 const NO_VALUE = 'No value';
 const FIRST_QUARTER_VALUE = '1/4 Value';
 const HALF_VALUE = '1/2 Value';
 const LAST_QUARTER_VALUE = '3/4 Value';
 const END = 'End Value';
-
-/* Tested :
- * - with a results table to avoid to recall the function with
- *   an already passed value. (No value 10 el = x0.5)
- * - Reflect.apply (No value 10 el = x0.92)
- */
-function sanicFind(array, predicate, thisArg) {
-	if (!(array instanceof Array)) {
-		throw new TypeError('array is not an Array');
-	}
-	if (typeof predicate !== 'function') {
-		throw new TypeError();
-	}
-
-	let functionToCall = predicate;
-
-	if (thisArg) {
-		functionToCall = predicate.bind(thisArg);
-	}
-
-	let i = 0;
-	const iMax = array.length;
-
-	for (; i < iMax; i++) {
-		if (functionToCall(array[i], i, array)) {
-			return array[i];
-		}
-	}
-
-	return undefined;
-}
 
 function doSuite(name, computeSuite, suiteOptions) {
 	const little = new Array(10).fill(0);
