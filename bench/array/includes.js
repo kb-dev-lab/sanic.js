@@ -1,5 +1,10 @@
 'use strict';
 
+/* Documentation
+ *
+ * https://medium.com/@jakubsynowiec/unique-array-values-in-javascript-7c932682766c
+ * Set.has() : too too slow (x0.05)
+ */
 function sanicIncludes(array, searchElement, fromIndex) {
     if (!(array instanceof Array)){
         throw new TypeError('array is not an Array');

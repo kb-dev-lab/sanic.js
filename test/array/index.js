@@ -3,6 +3,7 @@
 module.exports = {
     every: require('./every'),
     fill: require('./fill'),
+    find: require('./find'),
     filter: require('./filter'),
     forEach: require('./forEach'),
     map: require('./map'),

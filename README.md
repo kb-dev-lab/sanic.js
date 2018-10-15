@@ -3,6 +3,14 @@
 [![Build Status](https://travis-ci.org/kb-dev/sanic.js.svg?branch=master)](https://travis-ci.org/kb-dev/sanic.js)
 [![codecov](https://codecov.io/gh/kb-dev/sanic.js/branch/master/graph/badge.svg)](https://codecov.io/gh/kb-dev/sanic.js)
 
+## 1.0.0 is out with a HUGE performance boost! 
+
+### If you find some articles treating performances in Javascript, you can send them to me with in the **Issues** section. This will help me a lot to upgrade this library.
+
+Benchmarks between JS classic methods and Sanic methods [here](doc/perf.md).
+
+---
+
 > Another new day in the Javascript's world, and this fucking Array.prototype.map() function is always slow. But Sanic is here to save Javascript from the performance hell. GOTTA GO FAST !
 
 **sanic.js** is a library which increases Javascript natives functions performance to the detriment of some unused cases of EcmaScript specification. For example, this library removes _hasOwnProperty()_ check in Array methods, because nobody uses Array methods for an Object. (Why am I saying that : [See Note 2 of this paragraph](http://www.ecma-international.org/ecma-262/6.0/#sec-array.prototype.map)). 
@@ -18,8 +26,6 @@ The advantage of this bad technic is performances of all library called after **
 ```js 
     require('sanic.js').changeMyWorld();
 ``` 
-
-Since v0.0.4, if an updated method fell in a case where it cannot work, it will call the native method instead. It keeps compatibility with a lot of code and optimization are only done on good cases. This feature is enabled in all common uses.
 
 Due to the danger of the library, there's a lot of unit test and performance tests to try to protect you from bugs. But anyway, there are always bugs, so please report them in **Issues** section.
 
@@ -65,6 +71,7 @@ In this mode, all functions need the object to use to the first parameter and al
 
   - Array.prototype.**every()**
   - Array.prototype.**fill()**
+  - Array.prototype.**find()**
   - Array.prototype.**filter()**
   - Array.prototype.**forEach()**
   - Array.prototype.**map()**
@@ -89,8 +96,7 @@ In this mode, all functions need the object to use to the first parameter and al
     npm run benchmark Array.all
 ```
 
-Benchmarks [here](doc/perf.md).
-If you want to compare this library with others (fast.js and lodash), I made a benchmark available [here](docs/comp-bench.md).
+Benchmarks [here](doc/perf.md)
 
 ## Experimental functions
 
@@ -114,7 +120,6 @@ This is the same command line than benchmarks, but it enables a new flag which a
 ### Array
 
   - Array.prototype.**concat()**
-  - Array.prototype.**find()**
   - Array.prototype.**includes()**
   - Array.prototype.**indexOf()**
   - Array.prototype.**join()**
