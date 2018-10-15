@@ -5,7 +5,7 @@ module.exports = {
     every: require('./every'),
     filter: require('./filter'),
     fill: require('./fill'),    
-    find: process.env.EXPERIMENTAL ? require('./find') : undefined,
+    find: require('./find'),
     forEach: require('./forEach'),
     includes: process.env.EXPERIMENTAL ? require('./includes') : undefined,    
     indexOf: process.env.EXPERIMENTAL ? require('./indexOf') : undefined,
