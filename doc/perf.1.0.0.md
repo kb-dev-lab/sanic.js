@@ -1,5 +1,5 @@
 # Benchmarks
-_generated at Mon, 15 Oct 2018 10:26:38 GMT_
+_generated at Mon, 15 Oct 2018 08:11:49 GMT_
 
 **Node version** : v8.11.4  
 **Minimum sample size** : 200  
@@ -34,4 +34,4 @@ _generated at Mon, 15 Oct 2018 10:26:38 GMT_
 
  Method | Test | 10 | 1k | 1M |
 --- |--- |--- |--- |--- |
-|  assign| Assign object with n elements| x 2.75| x 3.92| x 2.64
+|  assign| Assign object with n elements| x 2.62| x 3.95| x 2.44
