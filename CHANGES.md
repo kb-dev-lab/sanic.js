@@ -2,7 +2,12 @@
 
 **Note :** [ex]function() are experimental functions, and aren't added in sanic.js library.
 
-## v0.2.0 - 10/12/18
+## v1.0.1 - 10/15/18
+
+ - Fix a bug in constructor methods
+ - Fix a bug in Object.assign()
+
+## v1.0.0 - 10/15/18
 
 Fn.bind() is faster than Fn.call(). Seems to be a huge improvement.
 After IR analysis with Turbolizer, it seems bind() didn't need a FrameState during each loop iteration instead of old method. The bind() move the FrameState to the loop instruction, which seems to explain why the trick is so powerful.

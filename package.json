@@ -1,6 +1,6 @@
 {
   "name": "sanic.js",
-  "version": "0.1.1",
+  "version": "1.0.1",
   "description": "JS Native Functions gotta go fast",
   "main": "index.js",
   "homepage": "https://github.com/AamuLumi/sanic.js",

@@ -30,11 +30,7 @@ function changeMyWorld() {
 
 		if (libForClass.constructorFunctions) {
 			Object.keys(libForClass.constructorFunctions).forEach((methodName) => {
-				constructor[methodName] = function(...args) {
-					const trueArgsArray = [this, ...args];
-
-					return libForClass.constructorFunctions[methodName].apply(this, trueArgsArray);
-				};
+				constructor[methodName] = libForClass.constructorFunctions[methodName];
 			});
 		}
 
