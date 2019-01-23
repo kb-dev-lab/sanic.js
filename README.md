@@ -3,9 +3,9 @@
 [![Build Status](https://travis-ci.org/kb-dev/sanic.js.svg?branch=master)](https://travis-ci.org/kb-dev/sanic.js)
 [![codecov](https://codecov.io/gh/kb-dev/sanic.js/branch/master/graph/badge.svg)](https://codecov.io/gh/kb-dev/sanic.js)
 
-## 1.0.0 is out with a HUGE performance boost! 
+## 1.1.0 and here's Object.clone() !
 
-### If you find some articles treating performances in Javascript, you can send them to me with in the **Issues** section. This will help me a lot to upgrade this library.
+### Object.clone() is an optional method you can use on any Object to get a deep clone of this Object. It clones too Array and Date. The function is a bit slow on small objects, so if you have some upgrades ideas, let's talk about it in [Issues](/issues). :) 
 
 Benchmarks between JS classic methods and Sanic methods [here](doc/perf.md).
 
