@@ -82,6 +82,7 @@ In this mode, all functions need the object to use to the first parameter and al
 
 ### Object
   - Object.**assign()**
+  - Object.**clone()** (optional method)
 
 ## Performance
 
