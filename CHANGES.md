@@ -2,6 +2,11 @@
 
 **Note :** [ex]function() are experimental functions, and aren't added in sanic.js library.
 
+## v1.1.0 - 01/23/19
+
+ - Add new optional method Object.clone()
+ - Update benchmark with Node 8.15.0 (LTS)
+
 ## v1.0.1 - 10/15/18
 
  - Fix a bug in constructor methods
