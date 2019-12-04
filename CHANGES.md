@@ -2,6 +2,13 @@
 
 **Note :** [ex]function() are experimental functions, and aren't added in sanic.js library.
 
+## v1.1.1 - 04/XX/19
+
+ - Upgrade functions for best performances with Node 10
+ - Add `old` folder for removed functions
+ - Remove Array.reduce() because now too slow
+ - Update benchmark with Node 10.16.0 (LTS)
+
 ## v1.1.0 - 01/23/19
 
  - Add new optional method Object.clone()
