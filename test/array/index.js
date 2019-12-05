@@ -7,7 +7,6 @@ module.exports = {
     filter: require('./filter'),
     forEach: require('./forEach'),
     map: require('./map'),
-    reduce: require('./reduce'),
     reduceRight: require('./reduceRight'),
     reverse: require('./reverse'),
     some: require('./some')
