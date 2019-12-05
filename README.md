@@ -17,7 +17,7 @@ Benchmarks between JS classic methods and Sanic methods [here](doc/perf.md).
 
 This project has 2 common uses :
  - like any other library with a classic object with methods.
- - with a special require changing prototype of natives objects concerned (Array, Object, ...).
+ - with a special require changing prototype of natives objects concerned (Array, Object, ...) (monkey patching).
 
 > gosh you're changing prototype of native objects taht's baaaaaaaad !!!!! :((
 
@@ -75,7 +75,6 @@ In this mode, all functions need the object to use to the first parameter and al
   - Array.prototype.**filter()**
   - Array.prototype.**forEach()**
   - Array.prototype.**map()**
-  - Array.prototype.**reduce()**
   - Array.prototype.**reduceRight()**
   - Array.prototype.**reverse()**
   - Array.prototype.**some()**
@@ -126,6 +125,7 @@ This is the same command line than benchmarks, but it enables a new flag which a
   - Array.prototype.**join()**
   - Array.prototype.**lastIndexOf()**
   - Array.prototype.**push()**
+  - Array.prototype.**reduce()**
   - Array.prototype.**shift()**
   - Array.prototype.**unshift()**
 
