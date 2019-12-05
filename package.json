@@ -1,6 +1,6 @@
 {
   "name": "sanic.js",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "JS Native Functions gotta go fast",
   "main": "index.js",
   "homepage": "https://github.com/AamuLumi/sanic.js",
@@ -16,7 +16,9 @@
     "url": "https://github.com/AamuLumi/sanic.js/issues",
     "email": "florian@kauder.fr"
   },
-  "dependencies": {},
+  "dependencies": {
+    "node-addon-api": "latest"
+  },
   "devDependencies": {
     "benchmark": "^2.1.4",
     "chai": "^4.1.0",
@@ -29,7 +31,8 @@
     "test": "nyc ./node_modules/mocha/bin/_mocha ./test/index.js",
     "report-coverage": "nyc report --reporter=lcov",
     "benchmark": "node ./bench/index.js",
-    "exp": "EXPERIMENTAL=true node ./bench/index.js"
+    "exp": "EXPERIMENTAL=true node --inspect ./bench/index.js",
+    "compile": "node-gyp build"
   },
   "keywords": [
     "performance",

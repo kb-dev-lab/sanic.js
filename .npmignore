@@ -3,3 +3,11 @@
 .nyc_output
 node_modules
 .travis.yml
+old
+doc
+bench
+test
+.eslintrc
+.gitignore
+.prettierrc
+README.md

@@ -1,0 +1,1 @@
+cmd_Release/obj.target/sanicjs.node := g++ -shared -pthread -rdynamic -m64  -Wl,-soname=sanicjs.node -o Release/obj.target/sanicjs.node -Wl,--start-group Release/obj.target/sanicjs/native/main.o Release/obj.target/node_modules/node-addon-api/src/nothing.a -Wl,--end-group 

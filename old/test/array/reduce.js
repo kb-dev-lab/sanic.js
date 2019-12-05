@@ -1,7 +1,7 @@
 'use strict';
 
 const expect = require('chai').expect;
-const sanicReduce = require('../../index').Library.Array.reduce;
+const sanicReduce = require('../../../index').Library.Array.reduce;
 
 const baseArray = (new Array(10000)).fill(0).map((e, i) => i);
 const evenArray = (new Array(10000)).fill(0).map((e, i) => i * 2);
