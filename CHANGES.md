@@ -2,6 +2,10 @@
 
 **Note :** [ex]function() are experimental functions, and aren't added in sanic.js library.
 
+## v1.1.2 - 12/05/19
+
+ - Remove useless `build` folder from the publish
+
 ## v1.1.1 - 12/05/19
 
  - Upgrade functions for best performances with Node 10
