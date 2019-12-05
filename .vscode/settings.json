@@ -3,5 +3,15 @@
 		"activityBar.background": "#41136B",
 		"titleBar.activeBackground": "#5C1A96",
 		"titleBar.activeForeground": "#FBF9FE"
+	},
+	"files.associations": {
+		"napi.h": "c",
+		"array.h": "c",
+		"node_api.h": "c",
+		"functional": "c",
+		"stl_algo.h": "c",
+		"algorithmfwd.h": "c",
+		"c++config.h": "c",
+		"os_defines.h": "c"
 	}
 }

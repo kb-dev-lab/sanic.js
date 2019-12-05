@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/aamulumi/.cache/node-gyp/10.16.3/include/node",
+                "/usr/lib64/gcc/x86_64-solus-linux/9/../../../../include/c++/9",
+                "/usr/lib64/gcc/x86_64-solus-linux/9/../../../../include/c++/9/x86_64-solus-linux",
+                "/usr/lib64/gcc/x86_64-solus-linux/9/../../../../include/c++/9/backward",
+                "/usr/lib64/gcc/x86_64-solus-linux/9/include",
+                "/usr/local/include",
+                "/usr/lib64/gcc/x86_64-solus-linux/9/include-fixed",
+                "/usr/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "${default}",
+            "compilerArgs": []
+        }
+    ],
+    "version": 4
+}
