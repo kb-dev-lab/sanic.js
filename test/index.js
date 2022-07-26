@@ -49,22 +49,22 @@ Object.keys(Classes).forEach((className) => {
 			return;
 		}
 
-		describe(`${className}.${methodName}()`, function() {
+		describe(`${className}.${methodName}()`, function () {
 			Classes[className][methodName]();
 		});
 	});
 });
 
-describe('changeMyWorld(): check activation and fallback', function() {
-	it('should enable sanic functions in prototype', function() {
+describe('changeMyWorld(): check activation and fallback', function () {
+	it('should enable sanic functions in prototype', function () {
 		require('../index').changeMyWorld();
 	});
 
-	it('should not crash when array is not an array', function() {
+	it('should not crash when array is not an array', function () {
 		[].map.call({}, (e) => e * e);
 	});
 
-	it('should not crash when calling a constructor function', function() {
+	it('should not crash when calling a constructor function', function () {
 		Object.assign({}, {});
 	});
 });

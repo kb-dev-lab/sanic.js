@@ -1,7 +1,7 @@
 'use strict';
 
 const expect = require('chai').expect;
-const sanicForEach = require('../../index').Library.Array.forEach;
+const sanicForEach = require('../../../index').Library.Array.forEach;
 
 const baseArray = new Array(10000).fill(0).map((e, i) => i);
 const evenArray = new Array(10000).fill(0).map((e, i) => i * 2);
@@ -11,20 +11,20 @@ const countUnderThresholdContext = {
 	threshold: 100,
 };
 
-module.exports = function() {
-	describe('Base behaviours', function() {
-		it("should do nothing if there's no array", function() {
+module.exports = function () {
+	describe('Base behaviours', function () {
+		it("should do nothing if there's no array", function () {
 			expect(sanicForEach()).to.be.undefined;
 		});
 
-		it('should need a function', function() {
+		it('should need a function', function () {
 			expect(() => sanicForEach(emptyArray)).to.throw();
 			expect(() => sanicForEach(emptyArray, [])).to.throw();
 			expect(() => sanicForEach(emptyArray, '')).to.throw();
 			expect(() => sanicForEach(emptyArray, null)).to.throw();
 		});
 
-		it('should not crash', function() {
+		it('should not crash', function () {
 			let nativeResult = 0;
 			emptyArray.forEach((e) => {
 				nativeResult += e;
@@ -36,13 +36,13 @@ module.exports = function() {
 			});
 		});
 
-		it('should call native forEach if array is not an array', function() {
+		it('should call native forEach if array is not an array', function () {
 			expect(() => sanicForEach({}, (e) => e * e)).to.not.throw();
 		});
 	});
 
-	describe('Sum function', function() {
-		it('should compute the same result than Array.prototype.forEach()', function() {
+	describe('Sum function', function () {
+		it('should compute the same result than Array.prototype.forEach()', function () {
 			let nativeResult = 0;
 			baseArray.forEach((e) => {
 				nativeResult += e;
@@ -57,17 +57,17 @@ module.exports = function() {
 		});
 	});
 
-	describe('Count under threshold function (with special context)', function() {
-		it('should compute the same result than Array.prototype.forEach() with basic function', function() {
+	describe('Count under threshold function (with special context)', function () {
+		it('should compute the same result than Array.prototype.forEach() with basic function', function () {
 			let nativeResult = 0;
-			baseArray.forEach(function(e) {
+			baseArray.forEach(function (e) {
 				nativeResult += e < this.threshold ? 1 : 0;
 			}, countUnderThresholdContext);
 
 			let sanicResult = 0;
 			sanicForEach(
 				baseArray,
-				function(e) {
+				function (e) {
 					sanicResult += e < this.threshold ? 1 : 0;
 				},
 				countUnderThresholdContext,
@@ -76,7 +76,7 @@ module.exports = function() {
 			expect(nativeResult).to.be.eql(sanicResult);
 		});
 
-		it('should compute the same result than Array.prototype.forEach() with fat-arrow', function() {
+		it('should compute the same result than Array.prototype.forEach() with fat-arrow', function () {
 			let nativeResult = 0;
 			baseArray.forEach((e) => {
 				nativeResult += e < this.threshold ? 1 : 0;
