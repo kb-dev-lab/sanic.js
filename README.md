@@ -3,9 +3,16 @@
 [![Build Status](https://travis-ci.org/kb-dev/sanic.js.svg?branch=master)](https://travis-ci.org/kb-dev/sanic.js)
 [![codecov](https://codecov.io/gh/kb-dev/sanic.js/branch/master/graph/badge.svg)](https://codecov.io/gh/kb-dev/sanic.js)
 
-## 1.1.0 and here's Object.clone() !
+## Support of this lib with evolution of Javascript (1.1.3 / Node 16 / 22-07-26)
 
-### Object.clone() is an optional method you can use on any Object to get a deep clone of this Object. It clones too Array and Date. The function is a bit slow on small objects, so if you have some upgrades ideas, let's talk about it in [Issues](/issues). :) 
+V8 engine evolved a lot since this project began. Few functions are still better with sanic.js, but a lot of them are now fully optimized in last versions of V8 engine (and Node.js/Chromium browsers).
+Except if I found a new trick exploding again performance of these functions (which is really hard with the good evolution of V8), this library is currently a story of the past.
+I have some tries to do with WebAssembly and N-Api. It was bad last time due to load overhead of C programs, but time has passed and these methods can be good today.
+So avoid to use this library while there's not any new big updates (1.1.3 at the time I wrote this message), and keep doing some readable code. **Readable code is optimized code**.
+
+### TL;DR: You shouldn't use this library anymore, except if you have some important performance problems with the last available functions.
+
+---
 
 Benchmarks between JS classic methods and Sanic methods [here](doc/perf.md).
 
@@ -69,14 +76,14 @@ In this mode, all functions need the object to use to the first parameter and al
 
 ### Array
 
-  - Array.prototype.**every()**
+  - Array.prototype.**every()** (removed in 1.1.3)
   - Array.prototype.**fill()**
-  - Array.prototype.**find()**
-  - Array.prototype.**filter()**
-  - Array.prototype.**forEach()**
+  - Array.prototype.**find()** (removed in 1.1.3)
+  - Array.prototype.**filter()** (removed in 1.1.3)
+  - Array.prototype.**forEach()** (removed in 1.1.3)
   - Array.prototype.**map()**
-  - Array.prototype.**reduceRight()**
-  - Array.prototype.**reverse()**
+  - Array.prototype.**reduceRight()** (removed in 1.1.3)
+  - Array.prototype.**reverse()** (removed in 1.1.3)
   - Array.prototype.**some()**
 
 ### Object
@@ -136,4 +143,3 @@ MIT ([LICENSE](/LICENSE))
 ## Thanks to
 
  - KBDev
- - ProMyze
